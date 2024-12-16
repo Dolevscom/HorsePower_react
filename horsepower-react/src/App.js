@@ -17,31 +17,37 @@ class App extends BaseApp {
 
 
     handleMessage = (event) => {
-        let rawData;
+    let rawData;
 
-        if (event.data instanceof ArrayBuffer) {
-            try {
-                rawData = new TextDecoder("utf-8").decode(event.data);
-            } catch (error) {
-                console.error("Failed to decode WebSocket data:", error);
-                return;
-            }
-        } else if (typeof event.data === "string") {
-            rawData = event.data;
-        } else {
-            console.warn("Unsupported data type received:", event.data);
+    // Decode data from WebSocket
+    if (event.data instanceof ArrayBuffer) {
+        try {
+            rawData = new TextDecoder("utf-8").decode(event.data);
+        } catch (error) {
+            console.error("Failed to decode WebSocket data:", error);
             return;
         }
+    } else if (typeof event.data === "string") {
+        rawData = event.data;
+    } else {
+        console.warn("Unsupported data type received:", event.data);
+        return;
+    }
 
-        console.log("Raw data from WebSocket:", rawData);
+    console.log("Raw data from WebSocket:", rawData);
 
-        if (typeof rawData === "string" && rawData.trim().length > 0) {
+    // Check if the data is valid and process accordingly
+    if (typeof rawData === "string" && rawData.trim().length > 0) {
+        // Determine the type of incoming data
+        if (rawData.startsWith("DATA")) {
+            // Parse lift cycle data
             try {
-                const [distance, time, horsepower] = rawData
-                    .trim()
-                    .split(" ")
-                    .map(parseFloat);
+                const [, distanceStr, timeStr, horsepowerStr] = rawData.trim().split(" ");
+                const distance = parseFloat(distanceStr);
+                const time = parseFloat(timeStr);
+                const horsepower = parseFloat(horsepowerStr);
 
+                // Update state with lift data
                 this.setState({
                     rawArduinoData: rawData,
                     arduinoData: {
@@ -50,11 +56,27 @@ class App extends BaseApp {
                         horsepower: horsepower || 0,
                     },
                 });
+
+                console.log("Parsed lift data:", {
+                    distance,
+                    time,
+                    horsepower,
+                });
             } catch (parseError) {
-                console.error("Failed to parse WebSocket data:", parseError);
+                console.error("Failed to parse lift data:", parseError);
             }
+        } else if (rawData.startsWith("LOG")) {
+            // Handle log messages
+            console.log("Log from Arduino:", rawData.slice(4).trim());
+        } else if (rawData.startsWith("ERROR")) {
+            // Handle error messages
+            console.error("Error from Arduino:", rawData.slice(6).trim());
+        } else {
+            // Handle unrecognized or other types of data
+            console.warn("Unrecognized data type:", rawData);
         }
-    };
+    }
+};
 
     componentDidMount() {
         super.componentDidMount(); // Set up WebSocket connection
@@ -78,8 +100,8 @@ class App extends BaseApp {
     moveToNextScreen = () => {
         this.setState((prevState) => {
             if (prevState.screen === "opening") return { screen: "main" };
-            if (prevState.screen === "main") return { screen: "ending" };
-            if (prevState.screen === "ending") return { screen: "opening" };
+            if (prevState.screen === "main") return { screen: "opening" };
+            // if (prevState.screen === "ending") return { screen: "opening" };
             return prevState;
         });
     };
