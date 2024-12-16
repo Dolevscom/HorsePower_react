@@ -17,66 +17,69 @@ class App extends BaseApp {
 
 
     handleMessage = (event) => {
-    let rawData;
-
-    // Decode data from WebSocket
-    if (event.data instanceof ArrayBuffer) {
-        try {
-            rawData = new TextDecoder("utf-8").decode(event.data);
-        } catch (error) {
-            console.error("Failed to decode WebSocket data:", error);
+        let rawData;
+    
+        // Decode data from WebSocket
+        if (event.data instanceof ArrayBuffer) {
+            try {
+                rawData = new TextDecoder("utf-8").decode(event.data);
+            } catch (error) {
+                console.error("Failed to decode WebSocket data:", error);
+                return;
+            }
+        } else if (typeof event.data === "string") {
+            rawData = event.data;
+        } else {
+            console.warn("Unsupported data type received:", event.data);
             return;
         }
-    } else if (typeof event.data === "string") {
-        rawData = event.data;
-    } else {
-        console.warn("Unsupported data type received:", event.data);
-        return;
-    }
-
-    console.log("Raw data from WebSocket:", rawData);
-
-    // Check if the data is valid and process accordingly
-    if (typeof rawData === "string" && rawData.trim().length > 0) {
-        // Determine the type of incoming data
-        if (rawData.startsWith("DATA")) {
-            // Parse lift cycle data
-            try {
-                const [, distanceStr, timeStr, horsepowerStr] = rawData.trim().split(" ");
-                const distance = parseFloat(distanceStr);
-                const time = parseFloat(timeStr);
-                const horsepower = parseFloat(horsepowerStr);
-
-                // Update state with lift data
-                this.setState({
-                    rawArduinoData: rawData,
-                    arduinoData: {
-                        distance: distance || 0,
-                        time: time || 0,
-                        horsepower: horsepower || 0,
-                    },
-                });
-
-                console.log("Parsed lift data:", {
-                    distance,
-                    time,
-                    horsepower,
-                });
-            } catch (parseError) {
-                console.error("Failed to parse lift data:", parseError);
+    
+        console.log("Raw data from WebSocket:", rawData);
+    
+        // Check if the data is valid and process accordingly
+        if (typeof rawData === "string" && rawData.trim().length > 0) {
+            // Determine the type of incoming data
+            if (rawData.startsWith("DATA")) {
+                // Parse lift cycle data
+                try {
+                    const [, distanceStr, timeStr, horsepowerStr] = rawData.trim().split(" ");
+                    const distance = parseFloat(distanceStr);
+                    const time = parseFloat(timeStr);
+                    const horsepower = parseFloat(horsepowerStr);
+    
+                    // Update state with lift data
+                    this.setState({
+                        rawArduinoData: rawData,
+                        arduinoData: {
+                            distance: distance || 0,
+                            time: time || 0,
+                            horsepower: horsepower || 0,
+                        },
+                    }, () => {
+                        console.log("Updated arduinoData:", this.state.arduinoData);
+                    });
+                    
+    
+                    console.log("Parsed lift data:", {
+                        distance,
+                        time,
+                        horsepower,
+                    });
+                } catch (parseError) {
+                    console.error("Failed to parse lift data:", parseError);
+                }
+            } else if (rawData.startsWith("LOG")) {
+                // Handle log messages
+                console.log("Log from Arduino:", rawData.slice(4).trim());
+            } else if (rawData.startsWith("ERROR")) {
+                // Handle error messages
+                console.error("Error from Arduino:", rawData.slice(6).trim());
+            } else {
+                // Handle unrecognized or other types of data
+                console.warn("Unrecognized data type:", rawData);
             }
-        } else if (rawData.startsWith("LOG")) {
-            // Handle log messages
-            console.log("Log from Arduino:", rawData.slice(4).trim());
-        } else if (rawData.startsWith("ERROR")) {
-            // Handle error messages
-            console.error("Error from Arduino:", rawData.slice(6).trim());
-        } else {
-            // Handle unrecognized or other types of data
-            console.warn("Unrecognized data type:", rawData);
         }
-    }
-};
+    };
 
     componentDidMount() {
         super.componentDidMount(); // Set up WebSocket connection
@@ -101,11 +104,10 @@ class App extends BaseApp {
         this.setState((prevState) => {
             if (prevState.screen === "opening") return { screen: "main" };
             if (prevState.screen === "main") return { screen: "opening" };
-            // if (prevState.screen === "ending") return { screen: "opening" };
             return prevState;
         });
     };
-
+f
     changeLanguage = () => {
         const languages = ["Hebrew", "English", "Arabic"];
         this.setState((prevState) => {
@@ -155,6 +157,8 @@ class App extends BaseApp {
         };
 
         const currentLabels = labels[language];
+        console.log("Current arduinoData:", arduinoData);
+
 
         if (screen === "opening") {
         const openingLabels = {
@@ -252,7 +256,7 @@ if (screen === "main") {
                     }}
                 />
                 <img
-                    src={require('./assets/empty_horse_ilus.png')} // Ensure correct path
+                    src={require('./assets/white_horse_ilus.png')} // Ensure correct path
                     alt="Horse"
                     className="horse-image"
                     style={{
@@ -268,19 +272,6 @@ if (screen === "main") {
         </>
     );
 }
-
-
-        // if (screen === "ending") {
-        //     return (
-        //         <div className="full-screen-image-wrapper">
-        //             <img
-        //                 src={`/assets/end_screen/end_${language}.png`}
-        //                 alt={`${screen} screen`}
-        //                 className="full-screen-image"
-        //             />
-        //         </div>
-        //     );
-        // }
     }
 
     render() {

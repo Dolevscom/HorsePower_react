@@ -8,6 +8,6 @@ const float HORSEPOWER_CONVERSION = 745.7; // Conversion factor to horsepower
 
 // Sensor-related constants
 const float THRESHOLD = 0.05;       // Threshold to detect lift movement (meters)
-const int SENSOR_UPDATE_DELAY = 50; // Sensor reading delay in milliseconds
+const int SENSOR_UPDATE_DELAY = 10; // Sensor reading delay in milliseconds
 
 #endif
