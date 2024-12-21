@@ -1,0 +1,27 @@
+.horse-container {
+    position: relative;
+    width: 600px; /* Set fixed width */
+    height: 600px; /* Fixed height to match proportions */
+    margin: 0 auto;
+}
+
+.horse-filled,
+.horse-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Force both images to occupy the container fully */
+    height: 100%;
+    object-fit: contain; /* Maintain aspect ratio and fit within the container */
+}
+
+.horse-filled {
+    z-index: 2;
+    clip-path: inset(100% 0 0 0); /* Will be updated dynamically */
+    transition: clip-path 1s ease-in-out;
+
+}
+
+.horse-base {
+    z-index: 1;
+}

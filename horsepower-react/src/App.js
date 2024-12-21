@@ -1,6 +1,8 @@
-import React from "react";
+import React,{ Component } from "react";
 import { BaseApp } from "./BaseApp";
 import "./App.css";
+import FillingHorse from "./components/FillingHorse";
+
 
 class App extends BaseApp {
     constructor(props) {
@@ -245,33 +247,12 @@ if (screen === "main") {
                 </div>
             </div>
 
-            {/* Horse Image at the Bottom */}
-            <div className="horse-container">
-                <img
-                    src={require('./assets/full_horse_ilus.png')}
-                    alt="Filled Horse"
-                    className="horse-filled"
-                    style={{
-                        clipPath: `inset(${100 - fillHeight}% 0 0 0)`, // Dynamic clipPath based on fillHeight
-                    }}
-                />
-                <img
-                    src={require('./assets/white_horse_ilus.png')} // Ensure correct path
-                    alt="Horse"
-                    className="horse-image"
-                    style={{
-                        position: 'absolute',
-                        bottom: '300px', // Adjust as needed
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        width: '700px', // Adjust size as needed
-                        height: 'auto',
-                    }}
-                />
-            </div>
+                 {/* Use FillingHorse Component */}
+                 <FillingHorse fillHeight={fillHeight} />
         </>
     );
 }
+
     }
 
     render() {
