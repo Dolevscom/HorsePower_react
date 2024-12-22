@@ -14,9 +14,12 @@ class App extends BaseApp {
             rawArduinoData: "", // Raw data from Arduino
             arduinoData: { distance: 0, time: 0, horsepower: 0 }, // Initialize with default values
             lastActivityTime: Date.now(), // Track the last activity timestamp
+            resetting: false, // Flag for resetting the animation and measuring    
+            showingMeasurement: false, // Flag to control when to show measurements
         };
+        this.resetTimer = null; // Timer for resetting
         this.idleTimeout = null; // Timeout for detecting idle state
-
+        this.showMeasurementTimer = null; // Timer for delayed measurement display
     }
 
 
@@ -62,6 +65,11 @@ class App extends BaseApp {
                     },
                     () => {
                         console.log("Updated arduinoData:", this.state.arduinoData);
+                        
+                        this.startResetTimer();
+                        
+                        // Trigger delay before showing measurements
+                        this.startShowMeasurementTimer();
 
                         // Check if this indicates the start of a "try"
                         if (this.state.screen === "opening" && horsepower > 0) {
@@ -80,6 +88,47 @@ class App extends BaseApp {
         this.logAction(`WebSocket received: ${rawData}`);
     };
 
+    startResetTimer = () => {
+        if (this.resetTimer) {
+            clearTimeout(this.resetTimer); // Clear any existing timer
+        }
+    
+        // Reset after 5 seconds (adjust as needed)
+        this.resetTimer = setTimeout(() => {
+            this.setState(
+                {
+                    arduinoData: { distance: 0, time: 0, horsepower: 0 }, // Reset measuring data
+                    resetting: true, // Set to true to trigger reset
+                },
+                () => {
+                    console.log("Animation and measuring have been reset!");
+    
+                    // Reset the flag after a short delay to allow for animation
+                    setTimeout(() => {
+                        this.setState({ resetting: false }, () => {
+                            console.log("Resetting flag set to false");
+                        });
+                    }, 500); // 0.5 seconds delay for the reset animation
+                }
+            );
+        }, 5000); // 5-second delay
+    };
+
+    startShowMeasurementTimer = () => {
+        if (this.showMeasurementTimer) {
+            clearTimeout(this.showMeasurementTimer); // Clear any existing timer
+        }
+    
+        // Delay before showing measurements (e.g., 2 seconds)
+        this.showMeasurementTimer = setTimeout(() => {
+            this.setState({ showingMeasurement: true }, () => {
+                console.log("Measurement is now visible!");
+            });
+        }, 2000); // 2-second delay
+    };
+    
+
+    
         // Transition to the main screen
     moveToMainScreen = () => {
         this.setState({ screen: "main" });
@@ -105,7 +154,7 @@ class App extends BaseApp {
         window.removeEventListener("keydown", this.handleKeyPress);
 
         if (this.idleTimeout) clearTimeout(this.idleTimeout);
-
+        if (this.resetTimer) {clearTimeout(this.resetTimer);}
 
     }
 
@@ -304,7 +353,10 @@ class App extends BaseApp {
         
         if (screen === "main") {
             const maxHorsepower = 1; // Adjust based on your maximum horsepower value
-            const fillHeight = Math.min((arduinoData.horsepower / maxHorsepower) * 100, 100); // Convert horsepower to percentage
+            const fillHeight = this.state.resetting
+                ? 0 // Reset to 0 when resetting
+                : Math.min((arduinoData.horsepower / maxHorsepower) * 100, 100); // Convert horsepower to percentage
+        
             console.log("Horsepower:", arduinoData.horsepower); // Debugging
             console.log("Fill Height:", fillHeight); // Debugging
         
@@ -325,16 +377,16 @@ class App extends BaseApp {
                     {/* Headline */}
                     <h1
                         style={{
-                            fontSize: "5 rem",
+                            fontSize: "6rem", // Larger headline
                             fontFamily: "SimplerPro",
-                            marginBottom: "0px",
-                            marginTop: "90px"
+                            marginBottom: "40px",
+                            marginTop: "50px",
                         }}
                     >
                         {language === "Hebrew"
                             ? "תוצאות"
                             : language === "English"
-                            ? "Result"
+                            ? "Results"
                             : "نتائج"}
                     </h1>
         
@@ -344,47 +396,117 @@ class App extends BaseApp {
                         style={{
                             display: "flex",
                             justifyContent: "space-around",
-                            width: "80%",
-                            marginBottom: "10px",
-                            marginTop: "50px"
+                            width: "90%", // Adjusted width for better spacing
+                            marginBottom: "20px",
+                            marginTop: "20px",
                         }}
                     >
                         {/* Distance */}
-                        <div className="data-item" style={{ textAlign: "center" }}>
-                            <h2 className={`${language} data-label`} style={{ fontSize: "1.2rem" }}>
+                        <div
+                            className="data-item"
+                            style={{
+                                textAlign: "center",
+                                padding: "20px",
+                                border: "2px solid #000", // Add border for better visibility
+                                borderRadius: "10px",
+                                backgroundColor: "#f9f9f9",
+                                width: "25%", // Adjust box width
+                            }}
+                        >
+                            <h2
+                                className={`${language} data-label`}
+                                style={{
+                                    fontSize: "2.5rem", // Enlarged label font size
+                                    marginBottom: "10px",
+                                }}
+                            >
                                 {currentLabels.data1}
                             </h2>
-                            <p className={`${language} data-value`} style={{ fontSize: "1rem" }}>
+                            <p
+                                className={`${language} data-value`}
+                                style={{
+                                    fontSize: "1.8rem", // Enlarged value font size
+                                    fontWeight: "regular",
+                                    color: "#333", // Darker color for better readability
+                                }}
+                            >
                                 {arduinoData.distance.toFixed(2)} {currentLabels.unit1}
                             </p>
                         </div>
         
                         {/* Time */}
-                        <div className="data-item" style={{ textAlign: "center" }}>
-                            <h2 className={`${language} data-label`} style={{ fontSize: "1.2rem" }}>
+                        <div
+                            className="data-item"
+                            style={{
+                                textAlign: "center",
+                                padding: "20px",
+                                border: "2px solid #000",
+                                borderRadius: "10px",
+                                backgroundColor: "#f9f9f9",
+                                width: "25%",
+                            }}
+                        >
+                            <h2
+                                className={`${language} data-label`}
+                                style={{
+                                    fontSize: "2.5rem",
+                                    marginBottom: "10px",
+                                }}
+                            >
                                 {currentLabels.data2}
                             </h2>
-                            <p className={`${language} data-value`} style={{ fontSize: "1rem" }}>
+                            <p
+                                className={`${language} data-value`}
+                                style={{
+                                    fontSize: "1.8rem",
+                                    fontWeight: "regular",
+                                    color: "#333",
+                                }}
+                            >
                                 {arduinoData.time.toFixed(2)} {currentLabels.unit2}
                             </p>
                         </div>
         
                         {/* Horsepower */}
-                        <div className="data-item" style={{ textAlign: "center" }}>
-                            <h2 className={`${language} data-label`} style={{ fontSize: "1.2rem" }}>
+                        <div
+                            className="data-item"
+                            style={{
+                                textAlign: "center",
+                                padding: "20px",
+                                border: "2px solid #000",
+                                borderRadius: "10px",
+                                backgroundColor: "#FAFBEF",
+                                width: "25%",
+                            }}
+                        >
+                            <h2
+                                className={`${language} data-label`}
+                                style={{
+                                    fontSize: "2.5rem",
+                                    marginBottom: "10px",
+                                }}
+                            >
                                 {currentLabels.data3}
                             </h2>
-                            <p className={`${language} data-value`} style={{ fontSize: "1rem" }}>
+                            <p
+                                className={`${language} data-value`}
+                                style={{
+                                    fontSize: "1.8rem",
+                                    fontWeight: "regular",
+                                    color: "#333",
+                                }}
+                            >
                                 {arduinoData.horsepower.toFixed(2)} {currentLabels.unit3}
                             </p>
                         </div>
                     </div>
         
                     {/* Horse Image at the Bottom */}
-                    <FillingHorse fillHeight={fillHeight} />
+                    <FillingHorse fillHeight={fillHeight * 2} />
                 </div>
             );
         }
+        
         
     }
 
