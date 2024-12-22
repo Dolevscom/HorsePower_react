@@ -257,15 +257,15 @@ class App extends BaseApp {
                 data3: "כוחות סוס",
                 unit1: "מטרים",
                 unit2: "שניות",
-                unit3: "כוחות סוס",
+                unit3: "כח סוס",
                 text1: "הרימו את הכדור הכי מהר והכי גבוה!",
                 text2: "הגעתם רחוק מאוד!",
                 text3: "סיימו בהצלחה!",
             },
             English: {
-                data1: "Distance Moved",
-                data2: "Time Taken",
-                data3: "Horsepower",
+                data1: "Distance",
+                data2: "Time",
+                data3: "Horse Power",
                 unit1: "meters",
                 unit2: "seconds",
                 unit3: "hp",
@@ -284,6 +284,12 @@ class App extends BaseApp {
                 text2: "جهد رائع!",
                 text3: "تم بنجاح!",
             },
+        };
+
+        const subheadline = {
+            Hebrew: "הרמתם משקולת שמשקלה 7.5 קילו",
+            English: "You lifted a 7.5kg weight",
+            Arabic: "لقد رفعت وزناً قدره 7.5 كجم",
         };
 
         const currentLabels = labels[language];
@@ -379,7 +385,7 @@ class App extends BaseApp {
                         style={{
                             fontSize: "6rem", // Larger headline
                             fontFamily: "SimplerPro",
-                            marginBottom: "40px",
+                            marginBottom: "10px",
                             marginTop: "50px",
                         }}
                     >
@@ -389,6 +395,19 @@ class App extends BaseApp {
                             ? "Results"
                             : "نتائج"}
                     </h1>
+
+                    {/* Subheadline */}
+                    <h2
+                        style={{
+                            fontSize: "2rem",
+                            fontFamily: "SimplerPro",
+                            fontWeight:"600",
+                            marginBottom: "30px",
+                            marginTop:"5px"
+                        }}
+                    >
+                        {subheadline[language]}
+                    </h2>
         
                     {/* Data Boxes */}
                     <div
@@ -397,8 +416,8 @@ class App extends BaseApp {
                             display: "flex",
                             justifyContent: "space-around",
                             width: "90%", // Adjusted width for better spacing
-                            marginBottom: "20px",
-                            marginTop: "20px",
+                            marginBottom: "10px",
+                            marginTop: "10px",
                         }}
                     >
                         {/* Distance */}
@@ -411,6 +430,7 @@ class App extends BaseApp {
                                 borderRadius: "10px",
                                 backgroundColor: "#f9f9f9",
                                 width: "25%", // Adjust box width
+                                fontWeight: "600",
                             }}
                         >
                             <h2
@@ -418,6 +438,8 @@ class App extends BaseApp {
                                 style={{
                                     fontSize: "2.5rem", // Enlarged label font size
                                     marginBottom: "10px",
+                                    textAlign:"center"
+                                    
                                 }}
                             >
                                 {currentLabels.data1}
@@ -426,15 +448,51 @@ class App extends BaseApp {
                                 className={`${language} data-value`}
                                 style={{
                                     fontSize: "1.8rem", // Enlarged value font size
-                                    fontWeight: "regular",
+                                    fontWeight: "400",
                                     color: "#333", // Darker color for better readability
+                                    textAlign:"center"
                                 }}
                             >
-                                {arduinoData.distance.toFixed(2)} {currentLabels.unit1}
+                                {arduinoData.distance.toFixed(2)} <br /> {currentLabels.unit1}
                             </p>
                         </div>
         
                         {/* Time */}
+                        <div
+                            className="data-item"
+                            style={{
+                                padding: "20px",
+                                border: "2px solid #000",
+                                borderRadius: "10px",
+                                backgroundColor: "#f9f9f9",
+                                width: "25%",
+                                fontWeight: "600",
+                            }}
+                        >
+                            <h2
+                                className={`${language} data-label`}
+                                style={{
+                                    fontSize: "2.5rem",
+                                    marginBottom: "10px",
+                                    textAlign:"center"
+                                }}
+                            >
+                                {currentLabels.data2}
+                            </h2>
+                            <p
+                                className={`${language} data-value`}
+                                style={{
+                                    fontSize: "1.8rem",
+                                    fontWeight: "400",
+                                    color: "#333",
+                                    textAlign:"center"
+                                }}
+                            >
+                                {arduinoData.time.toFixed(2)} <br /> {currentLabels.unit2}
+                            </p>
+                        </div>
+        
+                        {/* Horsepower */}
                         <div
                             className="data-item"
                             style={{
@@ -450,40 +508,9 @@ class App extends BaseApp {
                                 className={`${language} data-label`}
                                 style={{
                                     fontSize: "2.5rem",
+                                    fontWeight: "900",
                                     marginBottom: "10px",
-                                }}
-                            >
-                                {currentLabels.data2}
-                            </h2>
-                            <p
-                                className={`${language} data-value`}
-                                style={{
-                                    fontSize: "1.8rem",
-                                    fontWeight: "regular",
-                                    color: "#333",
-                                }}
-                            >
-                                {arduinoData.time.toFixed(2)} {currentLabels.unit2}
-                            </p>
-                        </div>
-        
-                        {/* Horsepower */}
-                        <div
-                            className="data-item"
-                            style={{
-                                textAlign: "center",
-                                padding: "20px",
-                                border: "2px solid #000",
-                                borderRadius: "10px",
-                                backgroundColor: "#FAFBEF",
-                                width: "25%",
-                            }}
-                        >
-                            <h2
-                                className={`${language} data-label`}
-                                style={{
-                                    fontSize: "2.5rem",
-                                    marginBottom: "10px",
+                                    textAlign:"center"
                                 }}
                             >
                                 {currentLabels.data3}
@@ -492,11 +519,12 @@ class App extends BaseApp {
                                 className={`${language} data-value`}
                                 style={{
                                     fontSize: "1.8rem",
-                                    fontWeight: "regular",
+                                    fontWeight: "400",
                                     color: "#333",
+                                    textAlign:"center"
                                 }}
                             >
-                                {arduinoData.horsepower.toFixed(2)} {currentLabels.unit3}
+                                {arduinoData.horsepower.toFixed(3)} <br /> {currentLabels.unit3}
                             </p>
                         </div>
                     </div>

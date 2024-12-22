@@ -1,11 +1,16 @@
 /* General Styling */
 body {
+    overflow: hidden;
     font-family: 'SimplerPro', sans-serif; /* Apply your custom font */
     background-color: #eafcf9; /* Ensure this matches your desired color */
     margin: 0;
     color: #333;
+    padding: 0;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
 
 @font-face {
     font-family: 'SimplerPro';
