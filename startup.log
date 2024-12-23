@@ -208,3 +208,60 @@ Sun Dec 22 08:08:02 PM IST 2024: Opening the app in Chrome...
 Sun Dec 22 08:08:02 PM IST 2024: Chrome is running in kiosk mode (PID: 22265).
 Sun Dec 22 08:08:02 PM IST 2024: Horsepower startup script completed.
 Opening in existing browser session.
+Mon 23 Dec 2024 18:06:44 IST: Starting Horsepower script...
+Mon 23 Dec 2024 18:06:44 IST: Killing processes on ports 3000 and 9001...
+3000/tcp:             3686
+9001/tcp:             3255
+Mon 23 Dec 2024 18:06:44 IST: Killing existing serial_to_websocket.py processes...
+No existing serial_to_websocket.py processes found.
+Mon 23 Dec 2024 18:06:44 IST: Activating virtual environment...
+Mon 23 Dec 2024 18:06:44 IST: Starting serial_to_websocket.py...
+Mon 23 Dec 2024 18:06:44 IST: serial_to_websocket.py is running in the background (PID: 5136).
+INFO:__main__:Connected to /dev/ttyUSB0
+Mon 23 Dec 2024 18:06:46 IST: Navigating to the React app directory...
+Mon 23 Dec 2024 18:06:46 IST: Starting the React app...
+Mon 23 Dec 2024 18:06:46 IST: React app is running in the background (PID: 5164).
+Mon 23 Dec 2024 18:06:46 IST: Waiting for the React app to initialize...
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+INFO:websockets.server:server listening on 127.0.0.1:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+INFO:websockets.server:connection open
+INFO:__main__:Sent: LOG Initial Distance Set: 1.5120
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: DATA 1.2068 0.0940 1.2667
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+Mon 23 Dec 2024 18:06:56 IST: Opening the app in Chrome...
+Mon 23 Dec 2024 18:06:56 IST: Chrome is running in kiosk mode (PID: 5304).
+Mon 23 Dec 2024 18:06:56 IST: Horsepower startup script completed.
+Opening in existing browser session.
+2024-12-23 19:48:30 - Starting the React and Python startup script...
+2024-12-23 19:48:30 - Navigating to the React project directory...
+2024-12-23 19:48:30 - Starting the React app...
+2024-12-23 19:48:30 - React app started successfully.
+2024-12-23 19:48:30 - Navigating to the Python script directory...
+2024-12-23 19:48:30 - Activating the Python virtual environment...
+2024-12-23 19:48:30 - Virtual environment activated successfully.
+2024-12-23 19:48:30 - Starting the Python WebSocket server...
+2024-12-23 19:48:30 - Python WebSocket server started successfully.
+2024-12-23 19:48:30 - Startup script completed.
+python: can't open file '/home/mada/Desktop/react_HorsePower/HorsePower_react/serial_to_websocket/serial_to_websockets.py': [Errno 2] No such file or directory
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
