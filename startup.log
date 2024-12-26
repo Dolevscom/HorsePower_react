@@ -265,3 +265,596 @@ python: can't open file '/home/mada/Desktop/react_HorsePower/HorsePower_react/se
 [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
 Starting the development server...
 
+Wed 25 Dec 2024 18:38:37 IST: Killing processes on ports 3000 and 9001...
+No process running on port 3000.
+No process running on port 9001.
+Wed 25 Dec 2024 18:38:37 IST: Killing existing serial_to_websocket.py processes...
+No existing serial_to_websocket.py processes found.
+Wed 25 Dec 2024 18:38:37 IST: Activating virtual environment...
+Wed 25 Dec 2024 18:38:37 IST: Starting serial_to_websocket.py...
+Wed 25 Dec 2024 18:38:37 IST: serial_to_websocket.py is running in the background.
+INFO:__main__:Connected to /dev/ttyUSB0
+Wed 25 Dec 2024 18:38:39 IST: Starting the React app...
+Wed 25 Dec 2024 18:38:39 IST: React app is running in the background.
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+INFO:websockets.server:server listening on 127.0.0.1:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Wed 25 Dec 2024 18:38:49 IST: Opening app in browser...
+Wed 25 Dec 2024 18:38:49 IST: Script completed.
+INFO:websockets.server:connection open
+INFO:__main__:Sent: LOG Initial Distance Set: 1.5130
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: DATA 1.2098 0.0940 1.2698
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+Wed 25 Dec 2024 18:44:09 IST: Killing processes on ports 3000 and 9001...
+No process running on port 3000.
+9001/tcp:             3747
+Wed 25 Dec 2024 18:44:09 IST: Killing existing serial_to_websocket.py processes...
+No existing serial_to_websocket.py processes found.
+Wed 25 Dec 2024 18:44:09 IST: Activating virtual environment...
+Wed 25 Dec 2024 18:44:09 IST: Starting serial_to_websocket.py...
+Wed 25 Dec 2024 18:44:09 IST: serial_to_websocket.py is running in the background.
+INFO:__main__:Connected to /dev/ttyUSB0
+Wed 25 Dec 2024 18:44:11 IST: Starting the React app...
+Wed 25 Dec 2024 18:44:11 IST: React app is running in the background.
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+INFO:websockets.server:server listening on 127.0.0.1:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Wed 25 Dec 2024 18:44:21 IST: Opening app in browser...
+Wed 25 Dec 2024 18:44:21 IST: Script completed.
+INFO:websockets.server:connection open
+INFO:__main__:Sent: LOG Initial Distance Set: 1.5300
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: DATA 1.2316 0.0940 1.2927
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+Wed 25 Dec 2024 18:47:19 IST: Killing processes on ports 3000 and 9001...
+No process running on port 3000.
+9001/tcp:             4820
+Wed 25 Dec 2024 18:47:19 IST: Killing existing serial_to_websocket.py processes...
+No existing serial_to_websocket.py processes found.
+Wed 25 Dec 2024 18:47:19 IST: Activating virtual environment...
+Wed 25 Dec 2024 18:47:19 IST: Starting serial_to_websocket.py...
+Wed 25 Dec 2024 18:47:19 IST: serial_to_websocket.py is running in the background.
+INFO:__main__:Connected to /dev/ttyUSB0
+Wed 25 Dec 2024 18:47:21 IST: Starting the React app...
+Wed 25 Dec 2024 18:47:21 IST: React app is running in the background.
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+INFO:websockets.server:server listening on 127.0.0.1:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Wed 25 Dec 2024 18:47:31 IST: Opening app in browser...
+Wed 25 Dec 2024 18:47:31 IST: Script completed.
+Wed 25 Dec 2024 18:51:27 IST: Activating virtual environment...
+Wed 25 Dec 2024 18:51:27 IST: Starting serial_to_websocket.py...
+Wed 25 Dec 2024 18:51:27 IST: serial_to_websocket.py is running in the background.
+INFO:__main__:Connected to /dev/ttyUSB0
+Wed 25 Dec 2024 18:51:29 IST: Starting the React app...
+Wed 25 Dec 2024 18:51:29 IST: React app is running in the background.
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Wed 25 Dec 2024 18:51:39 IST: Opening app in browser...
+Wed 25 Dec 2024 18:51:39 IST: Script completed.
+INFO:__main__:Connected to /dev/ttyUSB0
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Wed 25 Dec 2024 18:55:18 IST: Script completed.
+Wed 25 Dec 2024 18:56:09 IST: Activating virtual environment...
+Wed 25 Dec 2024 18:56:09 IST: Starting serial_to_websocket.py...
+Wed 25 Dec 2024 18:56:09 IST: serial_to_websocket.py is running in the background.
+INFO:__main__:Connected to /dev/ttyUSB0
+Wed 25 Dec 2024 18:56:11 IST: Starting the React app...
+Wed 25 Dec 2024 18:56:11 IST: React app is running in the background.
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Wed 25 Dec 2024 18:56:21 IST: Opening app in browser...
+Wed 25 Dec 2024 18:56:21 IST: Script completed.
+Wed 25 Dec 2024 19:06:41 IST: npm is already installed. Version: 9.2.0
+Wed 25 Dec 2024 19:06:41 IST: Installing dependencies...
+
+up to date, audited 2173 packages in 8s
+
+155 packages are looking for funding
+  run `npm fund` for details
+
+155 vulnerabilities (1 low, 122 moderate, 29 high, 3 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Wed 25 Dec 2024 19:06:49 IST: Starting the React app...
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Wed 25 Dec 2024 19:06:54 IST: Opening Firefox in fullscreen mode...
+Wed 25 Dec 2024 22:33:27 IST: Killing processes on ports 3000 and 9001...
+3000/tcp:             5462
+Wed 25 Dec 2024 22:33:27 IST: Killing existing serial_to_websocket.py processes...
+Wed 25 Dec 2024 22:33:27 IST: No existing serial_to_websocket.py processes found.
+Wed 25 Dec 2024 22:33:27 IST: Activating virtual environment...
+Wed 25 Dec 2024 22:33:27 IST: Starting serial_to_websocket.py...
+Wed 25 Dec 2024 22:33:27 IST: serial_to_websocket.py is running in the background.
+INFO:__main__:Connected to /dev/ttyUSB0
+Wed 25 Dec 2024 22:33:29 IST: Starting the React app...
+Wed 25 Dec 2024 22:33:29 IST: React app is running in the background.
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+INFO:websockets.server:server listening on 127.0.0.1:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start --host localhost
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Wed 25 Dec 2024 22:33:39 IST: Opening the app in Firefox (kiosk mode)...
+Wed 25 Dec 2024 22:33:39 IST: Script completed.
+Wed 25 Dec 2024 22:34:03 IST: Killing processes on ports 3000 and 9001...
+9001/tcp:             6105
+Wed 25 Dec 2024 22:34:03 IST: Killing existing serial_to_websocket.py processes...
+Wed 25 Dec 2024 22:34:03 IST: No existing serial_to_websocket.py processes found.
+Wed 25 Dec 2024 22:34:03 IST: Activating virtual environment...
+Wed 25 Dec 2024 22:34:03 IST: Starting serial_to_websocket.py...
+Wed 25 Dec 2024 22:34:03 IST: serial_to_websocket.py is running in the background.
+INFO:__main__:Connected to /dev/ttyUSB0
+Wed 25 Dec 2024 22:34:05 IST: Starting the React app...
+Wed 25 Dec 2024 22:34:05 IST: React app is running in the background.
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+INFO:websockets.server:server listening on 127.0.0.1:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts --openssl-legacy-provider start --host localhost
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Wed 25 Dec 2024 22:34:15 IST: Opening the app in Firefox (kiosk mode)...
+Wed 25 Dec 2024 22:34:15 IST: Script completed.
+Wed 25 Dec 2024 22:42:38 IST: Killing processes on ports 3000 and 9001...
+9001/tcp:             6261
+Wed 25 Dec 2024 22:42:38 IST: Killing existing serial_to_websocket.py processes...
+Wed 25 Dec 2024 22:42:38 IST: No existing serial_to_websocket.py processes found.
+Wed 25 Dec 2024 22:42:38 IST: Activating virtual environment...
+Wed 25 Dec 2024 22:42:38 IST: Starting serial_to_websocket.py...
+Wed 25 Dec 2024 22:42:38 IST: serial_to_websocket.py is running in the background.
+INFO:__main__:Connected to /dev/ttyUSB0
+Wed 25 Dec 2024 22:42:40 IST: Starting the React app...
+Wed 25 Dec 2024 22:42:40 IST: React app is running in the background.
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+INFO:websockets.server:server listening on 127.0.0.1:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.22.1.151/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Wed 25 Dec 2024 22:42:50 IST: Opening the app in Firefox (kiosk mode)...
+Wed 25 Dec 2024 22:42:50 IST: Script completed.
+INFO:websockets.server:connection open
+INFO:__main__:Sent: LOG Initial Distance Set: 1.5130
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: DATA 1.2106 0.0940 1.2707
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+Thu 26 Dec 2024 13:58:22 IST: Killing processes on ports 3000 and 9001...
+Thu 26 Dec 2024 13:58:22 IST: Killing existing serial_to_websocket.py processes...
+Thu 26 Dec 2024 13:58:22 IST: No existing serial_to_websocket.py processes found.
+Thu 26 Dec 2024 13:58:22 IST: Activating virtual environment...
+Thu 26 Dec 2024 13:58:22 IST: Starting serial_to_websocket.py...
+Thu 26 Dec 2024 13:58:22 IST: serial_to_websocket.py is running in the background.
+INFO:__main__:Connected to /dev/ttyUSB0
+Thu 26 Dec 2024 13:58:24 IST: Starting the React app...
+Thu 26 Dec 2024 13:58:24 IST: React app is running in the background.
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+INFO:websockets.server:server listening on 127.0.0.1:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts start
+
+(node:2000) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:2000) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view horsepower-react in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://172.22.1.151:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Thu 26 Dec 2024 13:58:34 IST: Opening the app in Firefox (kiosk mode)...
+Thu 26 Dec 2024 13:58:34 IST: Script completed.
+INFO:websockets.server:connection open
+INFO:__main__:Sent: LOG Initial Distance Set: 1.6830
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: DATA 1.3502 0.0940 1.4172
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6270
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6226
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6044
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5830
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5638
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5522
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5412
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5328
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5230
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4936
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4340
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.3306
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.1652
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.9402
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.6856
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.4418
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2530
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.1540
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.1506
+INFO:__main__:Sent: DATA 1.5324 31.6480 0.0048
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6322
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6240
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6222
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6216
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6186
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6176
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6140
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5952
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5646
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5460
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5252
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4974
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4632
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4384
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4034
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.3546
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.2722
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.1418
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.9614
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.7576
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.5574
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.3954
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.3032
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2930
+INFO:__main__:Sent: DATA 1.3900 5.4930 0.0250
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6256
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6244
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6218
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6210
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6200
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6174
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6150
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6142
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6018
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5828
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5678
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5620
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5528
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5462
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5362
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5228
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5036
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4924
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4768
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4682
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4372
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.3648
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.2296
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.0354
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.7848
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.5232
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.3084
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.1862
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.1640
+INFO:__main__:Sent: DATA 1.5190 8.1010 0.0185
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6244
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6226
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6184
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6180
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6172
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5976
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5838
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5726
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5520
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5320
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5236
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5072
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4844
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4464
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.3598
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.2102
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.9972
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.7442
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.4822
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2760
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.1656
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.1574
+INFO:__main__:Sent: DATA 1.5256 3.3530 0.0449
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6180
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6118
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6066
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6024
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5878
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5670
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5390
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5098
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4890
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4680
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4400
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.3860
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.2808
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.1036
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.8608
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.5888
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.3636
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2418
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2374
+INFO:__main__:Sent: DATA 1.4456 4.0960 0.0348
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6302
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6260
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6226
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6204
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6178
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6126
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6100
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6074
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6044
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6028
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6002
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5972
+INFO:__main__:Sent: DATA 0.0858 27.1880 0.0003
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6186
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6120
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6090
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6086
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6082
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6040
+INFO:__main__:Sent: DATA 0.0790 7.4490 0.0010
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6262
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6246
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6230
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6208
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6192
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6132
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6118
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6090
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6054
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6004
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5842
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5698
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5560
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5498
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5484
+INFO:__main__:Sent: DATA 0.1346 15.5520 0.0009
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6160
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6144
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6102
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6100
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.6024
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5950
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5850
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5732
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5638
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5618
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5612
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5582
+INFO:__main__:Sent: DATA 0.1248 6.3320 0.0019
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+Thu 26 Dec 2024 15:11:04 IST: Killing processes on ports 3000 and 9001...
+Thu 26 Dec 2024 15:11:04 IST: Killing existing serial_to_websocket.py processes...
+Thu 26 Dec 2024 15:11:04 IST: No existing serial_to_websocket.py processes found.
+Thu 26 Dec 2024 15:11:04 IST: Activating virtual environment...
+Thu 26 Dec 2024 15:11:04 IST: Starting serial_to_websocket.py...
+Thu 26 Dec 2024 15:11:04 IST: serial_to_websocket.py is running in the background.
+INFO:__main__:Connected to /dev/ttyUSB0
+Thu 26 Dec 2024 15:11:06 IST: Starting the React app...
+Thu 26 Dec 2024 15:11:06 IST: React app is running in the background.
+INFO:__main__:Starting WebSocket server on ws://localhost:9001
+INFO:websockets.server:server listening on 127.0.0.1:9001
+
+> horsepower-react@0.1.0 start
+> react-scripts start
+
+(node:1998) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:1998) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view horsepower-react in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://172.22.1.151:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Thu 26 Dec 2024 15:11:16 IST: Opening the app in Firefox (kiosk mode)...
+Thu 26 Dec 2024 15:11:16 IST: Script completed.
+INFO:websockets.server:connection open
+INFO:__main__:Sent: LOG Initial Distance Set: 1.6060
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: DATA 1.2868 0.0940 1.3507
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5452
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5276
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4922
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4276
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.3186
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.1558
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.9484
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.7178
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.5032
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.3352
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2368
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2222
+INFO:__main__:Sent: DATA 1.3838 1.2110 0.1127
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5400
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5278
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5142
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4960
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4584
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.3780
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.2508
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.0754
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.8566
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.6250
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.4250
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2788
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2080
+INFO:__main__:Sent: DATA 1.3980 1.3980 0.0987
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5378
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5254
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5144
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4966
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4838
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4738
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4682
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4572
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4314
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.3694
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.2632
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.1046
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.9042
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.6850
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.4850
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.3344
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2528
+INFO:__main__:Sent: DATA 1.3532 1.7710 0.0754
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5284
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5124
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5078
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.5040
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4906
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.4590
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.3990
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.3032
+INFO:__main__:Sent: LOG Updated Min Distance (m): 1.1660
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.9858
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.7792
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.5744
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.3994
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2820
+INFO:__main__:Sent: LOG Updated Min Distance (m): 0.2358
+INFO:__main__:Sent: DATA 1.3702 1.5840 0.0853
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.
+INFO:__main__:Sent: LOG Lift started moving.
+INFO:__main__:Sent: DATA 0.0502 4.1000 0.0012
+INFO:__main__:Sent: LOG Lift cycle complete. Cooldown started.
+INFO:__main__:Sent: LOG Cooldown complete. Ready for next try.

@@ -549,7 +549,7 @@ class App extends BaseApp {
     logAction = (action) => {
         const timestamp = new Date().toISOString();
     
-        fetch("http://localhost:3001/log", {
+        fetch("http://localhost:3001/log",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

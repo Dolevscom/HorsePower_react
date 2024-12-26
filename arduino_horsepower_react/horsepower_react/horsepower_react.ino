@@ -66,9 +66,7 @@ void loop()
   // Smooth the sensor reading
   smoothedDistance = calculateSmoothedDistance(currentDistance);
 
-  // Send smoothed distance logs for debugging
-  // Serial.println("LOG Smoothed Distance (m): " + String(smoothedDistance, 4));
-
+ 
   // Handle cooldown phase
   if (cooldownActive)
   {
