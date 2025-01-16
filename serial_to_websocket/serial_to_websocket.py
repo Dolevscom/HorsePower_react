@@ -7,8 +7,8 @@ import serial
 import serial.tools.list_ports
 import websockets
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s")
 
 MESSAGE_DELAY = 0.4
 

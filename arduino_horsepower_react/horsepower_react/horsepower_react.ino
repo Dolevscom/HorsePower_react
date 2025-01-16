@@ -18,6 +18,9 @@ const int smoothingWindowSize = 5; // Number of readings for smoothing
 float distanceBuffer[smoothingWindowSize] = {0}; // Buffer for rolling average
 int bufferIndex = 0;          // Index for the buffer
 
+const int buttonPin = A0; // Pin connected to the button
+bool buttonPressed = false;
+
 void setup()
 {
   Serial.begin(115200);
@@ -40,6 +43,9 @@ void setup()
   initialDistance = sensor.ranging_data.range_mm / 1000.0; // Convert mm to meters
   smoothedDistance = initialDistance; // Initialize smoothed distance
   Serial.println("LOG Initial Distance Set: " + String(initialDistance, 4));
+
+  const int buttonPin = A0; // Pin connected to the button
+  bool buttonPressed = false;
 }
 
 float calculateSmoothedDistance(float newDistance)
@@ -59,6 +65,21 @@ float calculateSmoothedDistance(float newDistance)
 
 void loop()
 {
+
+   // Read button state
+  // int buttonState = digitalRead(buttonPin);
+
+  // // Detect button press (active-low)
+  // if (buttonState == LOW && !buttonPressed)
+  // {
+  //   buttonPressed = true;
+  //   Serial.write(32); // Send ASCII code for space key
+  //   Serial.println("LOG Button pressed, simulating 'space' key.");
+  // }
+  // else if (buttonState == HIGH && buttonPressed)
+  // {
+  //   buttonPressed = false; // Reset button state
+  // }
   // Read sensor data
   sensor.read();
   float currentDistance = sensor.ranging_data.range_mm / 1000.0; // Convert mm to meters

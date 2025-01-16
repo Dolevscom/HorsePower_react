@@ -26,23 +26,25 @@ class App extends BaseApp {
 
     handleMessage = (event) => {
         let rawData;
+        const timestamp = new Date().toLocaleString(); // Define timestamp at the start of the function
+
     
         // Decode data from WebSocket
         if (event.data instanceof ArrayBuffer) {
             try {
                 rawData = new TextDecoder("utf-8").decode(event.data);
             } catch (error) {
-                console.error("Failed to decode WebSocket data:", error);
+                console.error(`[${timestamp}] Failed to decode WebSocket data:`, error);
                 return;
             }
         } else if (typeof event.data === "string") {
             rawData = event.data;
         } else {
-            console.warn("Unsupported data type received:", event.data);
+            console.warn(`[${timestamp}] Unsupported data type received:`, event.data);
             return;
         }
     
-        console.log("Raw data from WebSocket:", rawData);
+        console.log(`[${timestamp}] Raw data from WebSocket:`, rawData);
     
       // Parse data to detect a "try" or activity
       if (rawData.startsWith("DATA")) {
@@ -54,7 +56,7 @@ class App extends BaseApp {
 
                 // Update Arduino data
                 this.setState(
-                    {
+                   {
                         rawArduinoData: rawData,
                         arduinoData: {
                             distance: distance || 0,
@@ -64,7 +66,7 @@ class App extends BaseApp {
                         lastActivityTime: Date.now(), // Update last activity time
                     },
                     () => {
-                        console.log("Updated arduinoData:", this.state.arduinoData);
+                        console.log(`[${timestamp}] Updated arduinoData:`, this.state.arduinoData);
                         
                         this.startResetTimer();
                         
@@ -78,21 +80,24 @@ class App extends BaseApp {
                     }
                 );
             } catch (error) {
-                console.error("Failed to parse lift data:", error);
+            console.error(`[${timestamp}] Failed to parse lift data:`, error);
             }
         }
 
         // Reset idle timer on every valid data input
         this.resetIdleTimer();
-        console.log("Raw data from WebSocket:", rawData);
-        this.logAction(`WebSocket received: ${rawData}`);
+        console.log(`[${timestamp}]  Raw data from WebSocket:`, rawData);
+        console.log(`[${timestamp}] Reset idle timer.`);
+        this.logAction(`[${timestamp}] WebSocket received: ${rawData}`);
     };
 
     startResetTimer = () => {
+        const timestamp = new Date().toLocaleString();
         if (this.resetTimer) {
             clearTimeout(this.resetTimer); // Clear any existing timer
+            console.log(`[${timestamp}] Cleared existing reset timer.`);
         }
-    
+
         // Reset after 5 seconds (adjust as needed)
         this.resetTimer = setTimeout(() => {
             this.setState(
@@ -101,17 +106,18 @@ class App extends BaseApp {
                     resetting: true, // Set to true to trigger reset
                 },
                 () => {
-                    console.log("Animation and measuring have been reset!");
+                console.log(`[${timestamp}] Animation and measuring have been reset!`);
     
                     // Reset the flag after a short delay to allow for animation
                     setTimeout(() => {
                         this.setState({ resetting: false }, () => {
-                            console.log("Resetting flag set to false");
+                            console.log(`[${timestamp}] Resetting flag set to false.`);
                         });
-                    }, 500); // 0.5 seconds delay for the reset animation
+                    }, 700); // 0.5 seconds delay for the reset animation
                 }
             );
-        }, 5000); // 5-second delay
+        }, 7000); // 5-second delay
+        console.log(`[${timestamp}] Reset timer started.`);
     };
 
     startShowMeasurementTimer = () => {
@@ -131,20 +137,21 @@ class App extends BaseApp {
     
         // Transition to the main screen
     moveToMainScreen = () => {
-        this.setState({ screen: "main" });
-        this.enterFullScreen();
+        // this.setState({ screen: "main" });
+        this.setState({ screen: "opening" });
+        // this.enterFullScreen();
     };
 
     // Transition to the opening screen
     moveToOpeningScreen = () => {
         this.setState({ screen: "opening" });
-        this.enterFullScreen();
+        // this.enterFullScreen();
     };
 
     componentDidMount() {
         super.componentDidMount(); // Set up WebSocket connection
         window.addEventListener("keydown", this.handleKeyPress);
-        this.enterFullScreen();
+        // this.enterFullScreen();
         this.startIdleTimer();
 
     }
@@ -164,9 +171,10 @@ class App extends BaseApp {
         } else if (event.code === "Space") {
             event.preventDefault();
             this.changeLanguage();
-        } else if (event.key === "Escape") {
-            this.exitFullScreen();
         }
+        // } else if (event.key === "Escape") {
+        //     this.exitFullScreen();
+        // }
     };
 
     // Full-Screen Functions
@@ -199,10 +207,10 @@ class App extends BaseApp {
 
     moveToNextScreen = () => {
         this.setState((prevState) => {
-            const nextScreen = prevState.screen === "opening" ? "main" : "opening";
-            if (nextScreen === "main" || nextScreen === "opening") {
-                this.enterFullScreen(); // Enter full-screen when switching to the main screen
-            }
+            // const nextScreen = prevState.screen === "opening" ? "main" : "opening";
+
+            //MEANTIME this is for staying in opening screen
+            const nextScreen = prevState.screen === "opening" ? "opening" : "opening";
 
             this.logAction(`Switched to ${nextScreen} screen`);
 
@@ -243,6 +251,7 @@ class App extends BaseApp {
         // Only reset the timer if we are on the main screen
         if (this.state.screen === "main") {
             this.setState({ lastActivityTime: Date.now() });
+            console.log(`[${new Date().toLocaleString()}] Idle timer reset.`);
             this.startIdleTimer(); // Restart the idle timer
         }
     };
@@ -297,64 +306,47 @@ class App extends BaseApp {
 
 
         if (screen === "opening") {
+            // Map language to the corresponding image
+            const openingImages = {
+                Hebrew: require("/home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/src/assets/opening_screen.png"),
+                English: require("/home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/src/assets/opening_eng.jpg"),
+                Arabic: require("/home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/src/assets/opening_screen.png"),
+            };
+        
+            const gifImage = require("/home/mada/Desktop/react_HorsePower/HorsePower_react/horsepower-react/src/assets/opening_gif.gif");
+
             return (
                 <div
                     className="opening-screen"
                     style={{
-                        fontFamily: "SimplerPro",
-                        backgroundColor: "#eafcf9",
-                        textAlign: "center",
-                        direction: language === "Arabic" ? "rtl" : "ltr",
-                        padding: "20px",
+                        backgroundImage: `url(${openingImages[language]})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                        width: "100%",
+                        height: "100vh",
+                        position: "relative", // Enable positioning for child elements
                         display: "flex",
-                        flexDirection: "column",
                         justifyContent: "center",
                         alignItems: "center",
-                        height: "100vh",
                     }}
                 >
-                    {/* Headline */}
-                    <h1
-                        style={{
-                            fontSize: "4rem",
-                            marginBottom: "20px",
-                        }}
-                    >
-                        {language === "Hebrew"
-                            ? "כוח סוס"
-                            : language === "English"
-                            ? "Horsepower"
-                            : "قوة الحصان"}
-                    </h1>
-        
-                    {/* Image */}
+                    {/* Centered GIF */}
                     <img
-                        src={require("./assets/Placeholder_ilus.png")}
-                        alt="Illustration"
+                        src={gifImage}
+                        alt="Loading Animation"
                         style={{
-                            width: "70%",
-                            maxWidth: "600px",
-                            height: "auto",
-                            margin: "30px 0",
+                            width:"700px", // Adjust size as needed
+                            height: "700px",
+                            position: "absolute", // Position in the middle of the screen
+                            animation: "fadeIn 3s ease-in-out", // Add fade-in effect
+                            marginTop: "100px"
                         }}
                     />
-        
-                    {/* Subheadline */}
-                    <p
-                        style={{
-                            fontSize: "1.8rem",
-                            marginTop: "10px",
-                        }}
-                    >
-                        {language === "Hebrew"
-                            ? "הרימו את המשקולת במהירות האפשרית"
-                            : language === "English"
-                            ? "Lift the weight as quickly as possible"
-                            : "ارفع الوزن بأسرع ما يمكن"}
-                    </p>
                 </div>
             );
         }
+        
         
         
         if (screen === "main") {
